@@ -8,4 +8,3 @@ crate-type = ["cdylib", "lib"]
 
 [dependencies]
 pinocchio = "0.6.0"
-solana-program = "1.18.17"

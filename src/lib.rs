@@ -1,15 +1,12 @@
 use pinocchio::{
-    account_info::AccountInfo, entrypoint, msg, pubkey::Pubkey, ProgramResult
+    lazy_entrypoint::{ InstructionContext}, ProgramResult
   };
-  
-entrypoint!(process_instruction);
+  use pinocchio::lazy_entrypoint;
+
+lazy_entrypoint!(process_instruction);
 
 pub fn process_instruction(
-_program_id: &Pubkey,
-_accounts: &[AccountInfo],
-_instruction_data: &[u8],
+_context: InstructionContext,
 ) -> ProgramResult {
-    msg!("This program does exactly what the source code says!");
-
     Ok(())
 }
